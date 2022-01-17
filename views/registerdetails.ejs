@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+        <title>Student Details</title>
+    </head>
+    <body>
+        <h2 id="st-details">STUDENT DETAILS</h2>
+        <table class="table">
+            <thead class="table-danger">
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Date of Birth</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <% for(var i=0; i < register.length; i++){ %>
+            <tbody>
+                <tr>
+                    <td><%= register[i].firstName %></td>
+                    <td><%= register[i].lastName %></td>
+                    <td><%= register[i].dateOfBirth %></td>
+                    <td><%= register[i].gender %></td>
+                    <td><%= register[i].emailAddress %></td>
+                    <td><%= register[i].phoneNumber %></td>
+                </tr>
+            </tbody>
+            <% } %>
+        </table>
+    </body>
+</html>
